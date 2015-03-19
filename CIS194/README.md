@@ -1,0 +1,1 @@
+The following repository will contain my solutions related to the course materials for the open CIS194 course which can be found at www.seas.upen.edu/~cis194/spring13/lectures.html . The course is part of the recommendations and resources for learning Haskell as detailed by https://github.com/bitemyapp/learnhaskell .
