@@ -23,4 +23,6 @@ sumNumber :: Integer -> Integer
 sumNumber x	| x > 9  	= x `mod` 10 + sumNumber (x `div` 10)
 		| otherwise	= x
 
+validate :: Integer -> Bool
+validate x 	= sumDigits (doubleEveryOther $ toDigits x) `mod` 10 == 0
 
