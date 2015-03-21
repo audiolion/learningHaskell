@@ -17,9 +17,10 @@ doubleEveryOtherBeginning xs 		= xs
 
 sumDigits :: [Integer] -> Integer
 sumDigits [] 		= 0
-sumDigits (x:y:[]) 	= x `div` 10 + x `mod` 10 + y
-sumDigits (x:y:xs) 	= x `div` 10 + x `mod` 10 + y + sumDigits xs
+sumDigits (x:xs)	= sumNumber x + sumDigits xs
 
 sumNumber :: Integer -> Integer
 sumNumber x	| x > 9  	= x `mod` 10 + sumNumber (x `div` 10)
 		| otherwise	= x
+
+
