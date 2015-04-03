@@ -1,26 +1,5 @@
 --Author: Ryan Castner
 
-import Series
-
-sinPowSeD :: PowSe Double
-sinPowSeD = let (PowSe xs) = integrate cosPowSeD
-            in PowSe(0:xs)
-
-cosPowSeD :: PowSe Double
-cosPowSeD = let (PowSe xs) = integrate (negate sinPowSeD)
-            in PowSe(1:xs)
-
-sinPowSeR :: PowSe Rational
-sinPowSeR = let (PowSe xs) = integrate cosPowSeR
-            in PowSe(0:xs)
-
-cosPowSeR :: PowSe Rational
-cosPowSeR = let (PowSe xs) = integrate (negate sinPowSeR)
-            in PowSe(1:xs)
-
-mySine :: Floating a => a -> a
-mySine x = 3 * sin (x/3) - 4 * (sin(x/3) ^3)
-
 sub :: Num a => [a] -> [a] -> [a]
 sub []     []     = []
 sub l      []     = l
